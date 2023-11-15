@@ -23,7 +23,7 @@ const Menu = () => {
           className={({ isActive }) => (isActive ? "active" : undefined)}
           to="/TotalCarrito"
         >
-          Carrito De Compra
+          🛒Carrito De Compra
         </NavLink>
       </div>
     </Navbar>

@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const ContextImg = createContext();
 
-const PHOTO_URL = '../../pizzas.json';
+const PHOTO_URL = 'pizzas.json';
 
 export const ProviderImg = ({ children }) => {
   const [images, setImages] = useState([]);
@@ -31,6 +31,8 @@ export const ProviderImg = ({ children }) => {
     </ContextImg.Provider>
   );
 };
+
+export default ProviderImg; 
 
 
    

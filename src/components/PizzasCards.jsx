@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
 
-const PizzasCard = ({ pokemon }) => {
+const PizzasCard = ({ pizza }) => {
     const { name, stats, image, types } = pizza;
     return (
         <Card
