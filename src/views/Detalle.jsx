@@ -1,4 +1,32 @@
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import PizzasCards from '../components/PizzasCards';
+
+const Detalle = () => {
+  const { name } = useParams();
+  // Aquí deberías obtener la información de la pizza según el nombre desde tu contexto o API
+
+  const pizza = {
+    name: 'Pizza de ejemplo',
+    stats: [{ name: 'Calorías', base: 500 }],
+    image: 'url_de_la_imagen',
+  };
+
+  return (
+    <div>
+      <h2>Detalles de la Pizza</h2>
+      <PizzasCards pizza={pizza} />
+      {/* Agrega botón para agregar al carrito */}
+    </div>
+  );
+};
+
+export default Detalle;
+
+
+
+
+/*import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PizzasCard from "../components/PizzasCards";
 
@@ -38,7 +66,7 @@ const Detalle = () => {
   );
 };
 
-export default Detalle;
+export default Detalle;*/
 
 
 
@@ -47,36 +75,3 @@ export default Detalle;
 
 
 
-/*import { useParams } from "react-router-dom"
-import { useState, useEffect } from "react"
-import PizzasCard from "../components/PizzasCards";
-
-const Detalle = () => {
-    const { name } = useParams();
-    const [pizza, setPizza] = useState({})
-
-    const url = `../pizzas.json/${name}`
-
-     const getPizza = async () => {
-        const res = await fetch(url);
-        const data = await res.json();
-
-        const image = data.sprites.other.dream_world.front_default
-        // falta agregar los stats y los types aqui
-        setPizza({image, name});
-       
-    }
-
-    useEffect(() => {
-        getPizza();
-    }, [])
-
-    
-  return (
-    <>
-      <PizzasCard pizza={pizza} />
-    </>
-  )
-}
-
-export default Detalle*/

@@ -1,9 +1,9 @@
-
+//
 import { Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 import Home from "./views/Home";
 import Detalle from "./views/Detalle";
-import PizzasCard, { ProviderImg } from "./components/ContextImg";
+import PizzasCards, { ProviderImg } from "./components/ContextImg";
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pizzas" element={<PizzasCard />} />
+        <Route path="/pizzas" element={<PizzasCards />} />
         <Route path="/pizzas/:name" element={<Detalle />} />
       </Routes>
       </ProviderImg>
