@@ -1,10 +1,4 @@
 //
-
-
-
-
-
-// Update ProviderImg.js
 import React, { createContext, useEffect, useState } from "react";
 
 export const ContextImg = createContext();
@@ -33,7 +27,7 @@ export const ProviderImg = ({ children }) => {
       try {
         const response = await fetch(PHOTO_URL);
         const data = await response.json();
-        setImages(data.photos);
+        setImages(data);
       } catch (error) {
         console.error("Error al cargar los datos:", error);
       }

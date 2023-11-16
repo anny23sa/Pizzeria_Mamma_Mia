@@ -1,4 +1,3 @@
-//
 import React, { useContext } from "react";
 import { ContextImg } from "../components/ContextImg";
 import PizzasCards from "../components/PizzasCards";
